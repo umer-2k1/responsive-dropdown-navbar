@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+
+}
+body{
+    font-family: 'Eczar', serif;
+    /* overflow-x: hidden; */
+    background-color: #191e29;
+    background-color: #fff;
+    font-size: 1.7rem;
+}
+html{
+    font-size: 62.5%;
+}
+
+header{
+    background-color: #11101b;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 10rem;
+}
+.logo{
+    font-weight: 600;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.nav-bar  ul{
+    display: flex;
+}
+.nav-bar ul li{
+    list-style-type: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 4rem;
+    border-radius: 50px;
+    transition: 0.2s all;
+    margin: 0 2rem;
+    /* border: 1px solid red; */
+
+}
+
+.nav-bar ul li a:hover{
+    color: #11101b;
+    background-color: #fff;
+}
+
+.nav-bar ul li a.active{
+    color: #11101b;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    body{
+        font-size: 1.5rem;
+    }
+
+    header {
+      padding: 0 3rem;
+    }
+
+    .nav-bar ul li a{
+        padding: 2px 2rem;
+        margin: 0 1rem;
+    
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    body{
+        font-size: 1.6rem;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+  
+    .nav-bar{
+        position: absolute;
+        border-top: 2px solid silver;
+        top: 12vh;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #11101b;
+        
+        /* height: 300px; */
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        transition: 0.5s all;
+    }
+
+ 
+
+
+     .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* margin-top: 2rem; */
+        margin: auto;
+        opacity: 0;
+        
+    }
+    .nav-bar ul li{
+        margin-bottom: 3rem;
+        /* gap: 2rem; */
+        transition: 0.5s all;
+    }
+    .nav-bar.active{
+        height: 300px;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+   
+}
